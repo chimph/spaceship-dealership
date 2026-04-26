@@ -16,14 +16,14 @@ export default function StarField() {
     const context = ctx as CanvasRenderingContext2D;
 
     const starColors = [
-      [255, 255, 255],
-      [200, 220, 255],
-      [100, 150, 255],
-      [255, 200, 150],
-      [255, 180, 80],
-      [255, 140, 60],
-      [255, 100, 80],
-    ];
+      [255, 255, 255] as [number, number, number],
+      [200, 220, 255] as [number, number, number],
+      [100, 150, 255] as [number, number, number],
+      [255, 200, 150] as [number, number, number],
+      [255, 180, 80] as [number, number, number],
+      [255, 140, 60] as [number, number, number],
+      [255, 100, 80] as [number, number, number],
+    ] as const;
 
     let animationId: number;
 
@@ -35,7 +35,7 @@ export default function StarField() {
       opacity: number;
       targetOpacity: number;
       twinkleSpeed: number;
-      color: [number, number, number];
+      color: readonly [number, number, number];
     }
 
     interface ShootingStar {
